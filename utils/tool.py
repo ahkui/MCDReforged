@@ -46,8 +46,9 @@ def unique_list(l):
 	return ret
 
 
-def remove_suffix(text, suffix):
-	return re.sub(r'{}$'.format(suffix), '', text)
+def remove_suffix(text: str, suffix: str):
+	pos = text.rfind(suffix)
+	return text[:pos] if pos >= 0 else text
 
 
 def get_all_base_class(cls):
@@ -64,18 +65,7 @@ def clean_minecraft_color_code(text):
 
 
 def clean_console_color_code(text):
-	for c in [
-		Fore.BLACK, Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.CYAN, Fore.WHITE,
-		Fore.RESET, Fore.LIGHTBLACK_EX, Fore.LIGHTRED_EX, Fore.LIGHTGREEN_EX, Fore.LIGHTYELLOW_EX,
-		Fore.LIGHTBLUE_EX, Fore.LIGHTMAGENTA_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTWHITE_EX,
-		Style.BRIGHT, Style.DIM, Style.NORMAL, Style.RESET_ALL,
-		Back.BLACK, Back.RED, Back.GREEN, Back.YELLOW, Back.BLUE, Back.MAGENTA, Back.CYAN, Back.WHITE, Back.RESET,
-		Back.LIGHTBLACK_EX, Back.LIGHTRED_EX, Back.LIGHTGREEN_EX, Back.LIGHTYELLOW_EX, Back.LIGHTBLUE_EX,
-		Back.LIGHTMAGENTA_EX, Back.LIGHTCYAN_EX, Back.LIGHTWHITE_EX,
-		'\033[m'
-	]:
-		text = text.replace(c, '')
-	return text
+	return re.sub(r'\033\[(\d+(;\d+)?)?m', '', text)
 
 
 def format_plugin_file_name(file_name):

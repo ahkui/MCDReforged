@@ -29,7 +29,7 @@ server.stop.stop_fail: |
   服务端关闭出错，强制关闭
 
 server.stop.process_killed: |
-  进程已终止
+  进程 {0} 已终止
 
 server.send.send_when_stopped: |
   服务端已关闭，不能向其标准输入流输入指令
@@ -237,6 +237,9 @@ permission_manager.set_default_permission_level.done: |
 
 permission_manager.set_permission_level.done: |
   玩家 §b{0}§r 的权限等级已设置为 §e{1}§r
+
+plugin.call.args_not_matched: |
+  错误的参数数量！插件 {1} 的方法 {0} 需要 {2} 个参数，而期望需要 {3} 个参数
 
 plugin_manager.load: |
   加载
