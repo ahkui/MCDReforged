@@ -64,7 +64,7 @@ It also has these following methods:
 
 | Method | Function |
 |---|---|
-| start() | Start the server. Only works if the server has stopped |
+| start() | Start the server. Only works if the server has stopped and MCDR is not interrupted |
 | stop() | Use the specific command like `stop` to close the server. Only works if the server is running |
 | wait_for_start() | Wait until the server is stopped, in other words, startable |
 | restart() | Execute `stop()`、`wait_for_start()`、`start()` in order to restart the server |
@@ -73,6 +73,7 @@ It also has these following methods:
 | is_server_running() | If the server (more precisely, server process) is running |
 | is_server_startup() | If the server has started up |
 | is_rcon_running() | Return a bool representing if the rcon is running |
+| get_server_pid() | Return the pid of the server process. Notes the process with this pid is a bash process, which is the parent process of real server process you might be interested in |
 
 **Text Interaction**
 
@@ -180,7 +181,7 @@ This is an instance of a module, which is used by the new plugin to inherit some
 
 Related examples:
 
-```
+```Python
 counter = 0
 
 def on_load(server, old_module):
@@ -221,7 +222,7 @@ Current available:
 
 A lazy way to do that is to add such method below at the end of the old plugin after solving python3 compatibility issues:
 
-```
+```Python
 import copy
 
 def on_load(server, old):

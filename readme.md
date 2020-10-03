@@ -6,7 +6,7 @@ MCDReforged
 
 > This is a python based Minecraft server control tool
 
-MCDReforge (abbreviated as MCDR) is a tool which provides the management ability of the Minecraft server using custom plugin system. It doesn't need to modify or mod the original Minecraft server at all
+MCDReforged (abbreviated as MCDR) is a tool which provides the management ability of the Minecraft server using custom plugin system. It doesn't need to modify or mod the original Minecraft server at all
 
 From in-game calculator, player high-light, to manipulate scoreboard, manage structure file and backup / load backup, you can implement these by using MCDR and related plugins
 
@@ -38,6 +38,7 @@ Python version needs to be Python 3.6+. Already tested in environments  below:
 - requests
 - colorlog
 - colorama
+- psutil
 
 The requirements are also stored in `requirements.txt`. You can execute `pip install -r requirement.txt` to install all needed modules
 
@@ -71,6 +72,8 @@ MCDReforged/
 │
 └─ MCDReforged.py
 ```
+
+When you enter `ctrl-c` or `ctrl-z` to the console, MCDR will be interrupted. For first time MCDR will send the stop command to the server and for the other times MCDR will just kill the server process 
 
 ## Config
 
@@ -221,7 +224,7 @@ Permission file `permission.yml` is the config and storage file for the system
 
 Player name list of permission levels can be filled like this:
 
-```
+```YAML
 owner:
 - Notch
 admin:

@@ -73,7 +73,8 @@ class ServerInterface:
 
 		:rtype: None
 		"""
-		self.__server.stop(forced=False, new_server_status=ServerStatus.STOPPING_BY_PLUGIN)
+		self.__server.set_exit_naturally(False)
+		self.__server.stop(forced=False)
 
 	@log_call
 	def wait_for_start(self):
@@ -144,6 +145,20 @@ class ServerInterface:
 		:rtype: bool
 		"""
 		return self.__server.rcon_manager.is_running()
+
+	@log_call
+	def get_server_pid(self):
+		"""
+		Return the pid of the server process
+		Notes the process with this pid is a bash process, which is the parent process of real server process
+		you might be interested in
+
+		:return: The pid of the server. None if the server is stopped
+		:rtype: int or None
+		"""
+		if self.__server.process is not None:
+			return self.__server.process.pid
+		return None
 
 	# ------------------------
 	#     Text Interaction
@@ -352,7 +367,7 @@ class ServerInterface:
 		:raise: IllegalCall
 		"""
 		thread = threading.current_thread()
-		if hasattr(thread, 'plugin') and type(thread.plugin) is Plugin:
+		if type(getattr(thread, 'plugin', None)) is Plugin:
 			plugin = thread.plugin  # type: Plugin
 			plugin.add_help_message(prefix, message)
 		else:
