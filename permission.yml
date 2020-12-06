@@ -7,12 +7,25 @@
 # - user
 # - guest
 
-
 default_level: user
 
 owner:
-- Fallen_Breath
+- _ahkui_
 admin:
+- alice
 helper:
 user:
+- MaxLye93
+- moi
+- Jou
+- _moi_
+- jvuchein
+- dream_rhythm
+- afk1
+- will200013
+- xRockBoyx
+- O_oRockBoyo_O
+- kittensbolf
+- csmoi
+- Minnnnn
 guest:

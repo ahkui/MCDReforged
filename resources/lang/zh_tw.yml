@@ -1,0 +1,347 @@
+server.load_config.language_set: |
+  語言已設置為 {0}
+
+server.load_config.debug_mode_on: |
+  除錯模式開啟
+
+server.load_config.parser_set: |
+  解析器已設置為 {0}
+
+server.load_config.encoding_decoding_set: |
+  編碼 / 解碼方式已設置為 {0} / {1}
+
+server.start_server.start_twice: |
+  伺服器不能多次啟動
+
+server.start_server.starting: |
+  正在啟動伺服器，啟動參數為 "{0}"
+
+server.start_server.start_fail: |
+  伺服器啟動失敗
+
+server.start_server.pid_info: |
+  伺服器正在以 PID {0} 運行中
+
+server.stop.stop_twice: |
+  伺服器不能在關閉時再次關閉
+
+server.stop.stop_fail: |
+  伺服器關閉出錯，強制關閉
+
+server.stop.process_killed: |
+  進程已終止
+
+server.send.send_when_stopped: |
+  伺服器已關閉，不能向其標準輸入流輸入指令
+
+server.receive.wait_stop: |
+  等待伺服器進程停止
+
+server.receive.decode_fail: |
+  解析文件 "{0}" 出錯
+
+server.on_server_stop.show_stopcode: |
+  伺服器進程返回代碼: {0}
+
+server.on_server_stop.stop_by_itself: |
+  伺服器自行關閉
+
+server.tick.pre_parse_fail: |
+  預解析伺服器標準輸出流失敗，使用源文件
+
+server.run.error: |
+  運行 MCDR 時出錯
+
+server.on_mcdr_stop.user_interrupted: |
+  MCDR 已被用戶終止
+
+server.on_mcdr_stop.server_stop: |
+  伺服器已關閉
+
+server.on_mcdr_stop.bye: |
+  bye
+
+server.on_mcdr_stop.stop_error: |
+  關閉 MCDR 時出錯，忽略並繼續退出
+
+server.console_input.parse_fail: |
+  解析控制台指令 "{0}" 出錯
+
+server.console_input.error: |
+  運行控制台執行緒時出錯
+
+server.react.error: |
+  運行反應器 {0} 時出錯
+
+server.info_queue.full: |
+  訊息佇列已滿, 伺服器是否在刷屏? 忽略新到來消息
+
+command_manager.help_message: |
+  §7!!MCDR§r: 顯示這條消息
+  §7!!MCDR reload§r: 顯示重載相關的説明資訊
+  §7!!MCDR status§r: 顯示 MCDR 狀態
+  §7!!MCDR permission§r: 顯示權限相關的説明資訊
+  §7!!MCDR plugin§r: 顯示外掛程式相關的説明資訊
+  §7!!MCDR checkupdate§r: 從 Github 檢查更新
+
+command_manager.help_message_reload: |
+  §7!!MCDR reload plugin§r: 載入 / 重載 / 卸載§l有修改的§r外掛程式
+  §7!!MCDR reload config§r: 重載設定檔
+  §7!!MCDR reload permission§r: 重載權限文件
+  §7!!MCDR reload all§r: 重載上述所有
+
+command_manager.help_message_permission: |
+  §7!!MCDR permission list §e[<level>]§r: 列出所有玩家的權限等級。如果 §e[<level>]§r 被指定則僅列出權限等級 §e[<level>]§r
+  §7!!MCDR permission set §b<player>§r §e<level>§r: 將 §b<player>§r 的權限等級設置為 §e<level>§r
+  §7!!MCDR permission remove §b<player>§r: 將 §b<player>§r 從權限資料庫中移除
+  §7!!MCDR permission setdefault §e<level>§r: 將預設權限等級設置為 §e<level>§r
+
+command_manager.help_message_plugin: |
+  §7!!MCDR plugin list§r: 列出所有的外掛程式
+  §7!!MCDR plugin load §e<plugin>§r: 載入 / 重載名為 §e<plugin>§r 的外掛程式
+  §7!!MCDR plugin enable §e<plugin>§r: 啟用名為 §e<plugin>§r 的外掛程式
+  §7!!MCDR plugin disable §e<plugin>§r: 禁用名為 §e<plugin>§r 的外掛程式
+  §7!!MCDR plugin reloadall§r: 載入 / 重載 / 卸載§l所有§r外掛程式
+
+command_manager.command_not_found: |
+  參數錯誤，輸入 "§7{0}§r" 以查看幫助
+
+command_manager.command_not_found_suggest: |
+  點擊以輸入 "§7{0}§r"
+
+command_manager.refresh_changed_plugins.fail: |
+  重載變化的外掛程式§c失敗§r
+
+command_manager.reload_config.fail: |
+  設定檔重載§c失敗§r
+
+command_manager.reload_config.success: |
+  設定檔重載§a成功§r
+
+command_manager.permission_not_enough: |
+  §c權限等級不足§r
+
+command_manager.reload_permission.fail: |
+  權限檔重載§c失敗§r
+
+command_manager.reload_permission.success: |
+  權限文件重載§a成功§r
+
+command_manager.invalid_permission_level: |
+  §c無效的權限等級§r
+
+command_manager.invalid_player_name: |
+  §c無效的玩家名稱§r
+
+command_manager.remove_player_permission.player_removed: |
+  已移除玩家 §b{0}§r
+
+command_manager.list_permission.show_default: |
+  預設等級: §e{0}§r
+
+command_manager.list_permission.suggest_setdefault: |
+  點擊以設置預設權限等級
+
+command_manager.list_permission.suggest_list: |
+  點擊以查看權限等級 §e{0}§r 的玩家列表
+
+command_manager.list_permission.suggest_set: |
+  點擊以設置玩家 §b{0}§r 的權限等級
+
+command_manager.list_permission.suggest_disable: |
+  點擊以將玩家 §b{0}§r 從權限資料庫中移除
+
+command_manager.print_mcdr_status.online: |
+  §a線上§r
+
+command_manager.print_mcdr_status.offline: |
+  §7離線§r
+
+command_manager.print_mcdr_status.line1: |
+  §l{0}§r 版本: §e{1}§r
+
+command_manager.print_mcdr_status.line2: |
+  伺服器狀態: {0}
+
+command_manager.print_mcdr_status.line3: |
+  伺服器已啟動: §7{0}§r
+
+command_manager.print_mcdr_status.line4: |
+  rcon: {0}
+
+command_manager.print_mcdr_status.line5: |
+  外掛程式數量: §6{0}§r
+
+command_manager.print_mcdr_status.extra_line1: |
+  伺服器 PID: {0}
+
+command_manager.print_mcdr_status.extra_line2: |
+  訊息佇列大小: §6{0}§r/§6{1}§r
+
+command_manager.print_mcdr_status.extra_line3: |
+  執行緒數: §6{0}§r
+
+command_manager.list_plugin.info_loaded_plugin: |
+  §6{0}x §e已載入外掛程式§r
+
+command_manager.list_plugin.info_disabled_plugin: |
+  §6{0}x §e已禁用外掛程式§r
+
+command_manager.list_plugin.info_not_loaded_plugin: |
+  §6{0}x §e未載入外掛程式§r
+
+command_manager.list_plugin.suggest_disable: |
+  點擊以禁用外掛程式 "§e{0}§r"
+
+command_manager.list_plugin.suggest_enable: |
+  點擊以啟用外掛程式 "§e{0}§r"
+
+command_manager.list_plugin.suggest_reload: |
+  點擊以重載外掛程式 "§e{0}§r"
+
+command_manager.list_plugin.suggest_load: |
+  點擊以載入外掛程式 "§e{0}§r"
+
+command_manager.invalid_plugin_name: |
+  無效的外掛程式名 "§e{0}§r"
+
+command_manager.disable_plugin.fail: |
+  外掛程式 "§e{0}§r" 禁用§c失敗§r
+
+command_manager.disable_plugin.success: |
+  外掛程式 "§e{0}§r" 禁用§a成功§r
+
+command_manager.load_plugin.fail: |
+  外掛程式 "§e{0}§r" 啟用§c失敗§r
+
+command_manager.load_plugin.success: |
+  外掛程式 "§e{0}§r" 啟用§a成功§r
+
+command_manager.enable_plugin.load_fail: |
+  外掛程式 "§e{0}§r" 載入§c失敗§r
+
+command_manager.enable_plugin.success: |
+  外掛程式 "§e{0}§r" 啟用§a成功§r
+
+command_manager.reload_all_plugin.fail: |
+  重載所有外掛程式§c失敗§r
+
+command_manager.mcdr_help_message: |
+  MCDR 控制指令
+
+permission_manager.load.fail: |
+  載入權限檔 §7{0}§r §c失敗§r，使用預設的空資料
+
+permission_manager.set_default_permission_level.done: |
+  預設權限等級已設置為 §e{0}§r
+
+permission_manager.set_permission_level.done: |
+  玩家 §b{0}§r 的權限等級已設置為 §e{1}§r
+
+plugin_manager.load: |
+  載入
+
+plugin_manager.unload: |
+  卸載
+
+plugin_manager.reload: |
+  重載
+
+plugin_manager.load_plugin.fail: |
+  外掛程式 {0} 載入失敗
+
+plugin_manager.load_plugin.success: |
+  外掛程式 {0} 已載入
+
+plugin_manager.unload_plugin.unload_fail: |
+  外掛程式 {0} 卸載失敗
+
+plugin_manager.unload_plugin.unload_success: |
+  外掛程式 {0} 已卸載
+
+plugin_manager.reload_plugin.reload_fail: |
+  外掛程式 {0} 重載失敗
+
+plugin_manager.reload_plugin.reload_success: |
+  外掛程式 {0} 已重載
+
+plugin_manager.__refresh_plugins.loading: |
+  載入外掛程式中
+
+plugin_manager.__refresh_plugins.info_loaded: |
+  已載入: §7{0}§r 個外掛程式
+
+plugin_manager.__refresh_plugins.info_unloaded: |
+  已卸載: §7{0}§r 個外掛程式
+
+plugin_manager.__refresh_plugins.info_reloaded: |
+  已重載: §7{0}§r 個外掛程式
+
+plugin_manager.__refresh_plugins.info_fail: |
+  失敗: §7{0}§r 個外掛程式
+
+plugin_manager.__refresh_plugins.info_none: |
+  無外掛程式變更
+
+plugin_manager.__refresh_plugins.info_plugin_amount: |
+  已載入外掛程式總數: §7{0}§r
+
+rcon_manager.connect.connection_fail: |
+  rcon 連接失敗: {0}
+
+rcon_manager.connect.connected: |
+  rcon 已連接
+
+rcon_manager.connect.wrong_password: |
+  rcon 密碼錯誤，連接失敗
+
+rcon_manager.disconnect.disconnected: |
+  rcon 已斷開連接
+
+rcon_manager.disconnect.disconnect_fail: |
+  rcon 斷開連接失敗
+
+server_status.running: |
+  §a運行中§r
+
+server_status.stopping_by_itself: |
+  §c正在自行關閉§r
+
+server_status.stopping_by_plugin: |
+  §c正在被外掛程式關閉§r
+
+server_status.stopped: |
+  §4已關閉§r
+
+general_reactor.permission_denied: |
+  權限不足
+
+parser_manager.load_parser.file_not_found: |
+  解析器 "{0}" 未找到! 請確保你在設定檔中填寫的解析器是正確的
+
+parser_manager.load_re_death_message.fail: |
+  死亡資訊資料檔案載入失敗
+
+update_helper.check_update.already_checking: |
+  MCDR 已在檢查更新中
+
+update_helper.check_update.check_fail: |
+  從 Github 檢測最新版本失敗: {0}
+
+update_helper.check_update.is_already_latest: |
+  MCDR 已為最新版
+
+update_helper.check_update.newer_than_latest: |
+  目前版本 §7{0}§r 比 Github 中的最新版 §7{1}§r 更新，這是一個開發版嗎？
+
+update_helper.check_update.new_version_detected: |
+  已檢測到新版本: §7{0}§r。§7{0}§r 的新內容:
+
+update_helper.check_update.new_version_url: |
+  你可以在這裡更新 MCDR: §9{0}§r
+
+update_helper.check_update.download_finished: |
+  最新的 MCDR 下載完成，檔位於 §7{0}§r
+
+update_helper.check_update.download_fail: |
+  最新的 MCDR §c下載失敗§r
