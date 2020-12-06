@@ -3,3 +3,5 @@ requests
 colorlog
 colorama
 psutil
+pydrive
+PyYAML

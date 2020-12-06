@@ -6,6 +6,7 @@ test.py
 a.py
 mcd2/
 server/*
+server*/*
 !plugins/sample_plugin.py
 plugins/*
 config/
@@ -17,3 +18,4 @@ mc_task.json
 seen.json
 PCRC.log
 MCDR_update/
+.DS_Store
