@@ -1,22 +1,53 @@
+# IDE
 .idea
-release
-__pycache__
+
+# python things
+*/__pycache__
+venv/
+.pytest_cache
+
+# pypi
+build/
+dist/
+*.egg-info/
+
+# file structure
 log/
-test.py
-a.py
-mcd2/
+logs/
+config/
 server/*
 server*/*
 !plugins/sample_plugin.py
+release/
 plugins/*
-config/
+!SamplePlugin.py
+!plugins/test.py
+
+# plugin things
 qb_multi/
 perma_backup/
 PCRC_recordings/
-MCDReforged.spec
 mc_task.json
 seen.json
 PCRC.log
 MCDR_update/
 .DS_Store
 Minecraft**/
+back-up/
+
+# random files
+test.py
+plugins_test/*
+plugins0.x/*
+plugins_dev/*
+
+# user config files
+# these will be automatically generated at the first run
+config.yml
+permission.yml
+
+# sphinx documentation
+docs/build/
+**/.doctrees/
+**/*.mo
+**/*.pot
