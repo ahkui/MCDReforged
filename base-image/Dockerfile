@@ -13,3 +13,7 @@ RUN apk update \
     python2-dev
 
 ENV JAVA_HOME="/usr/lib/jvm/java-1.8-openjdk"
+
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
